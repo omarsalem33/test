@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نتيجة الطالب</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>نتيجة الطالب</h1>
+        <form id="studentForm">
+            <label for="classSelect">اختر الصف:</label>
+            <select id="classSelect">
+                <option value="1">الصف الأول</option>
+                <option value="2">الصف الثاني</option>
+                <option value="3">الصف الثالث</option>
+            </select>
+
+            <label for="seatNumber">رقم الجلوس:</label>
+            <input type="text" id="seatNumber" required>
+
+            <button type="submit">بحث</button>
+        </form>
+
+        <div id="result" class="hidden">
+            <h2>نتيجة الطالب</h2>
+            <p><strong>اسم الطالب:</strong> <span id="studentName"></span></p>
+            <p><strong>رقم الجلوس:</strong> <span id="studentSeatNumber"></span></p>
+            <p><strong>المواد:</strong></p>
+            <ul id="subjectsList"></ul>
+            <p><strong>المجموع الكلي:</strong> <span id="totalMarks"></span></p>
+            <p><strong>النسبة المئوية:</strong> <span id="percentage"></span>%</p>
+            <p><strong>التقدير العام:</strong> <span id="grade"></span></p>
+        </div>
+
+        <div id="errorMessage" class="hidden">
+            <p>رقم الجلوس غير صحيح!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
